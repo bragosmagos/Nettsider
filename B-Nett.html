@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+    //Klarer du å se hva denne metoden gjør?
+    function changeBackgroundColor()
+    {
+        //Her er en liste med navn på farger. Det finnes 8 av dem
+       colors = ["red", "blue", "yellow", "pink", "cyan", "lime", "purple", "green"];
+       //Her lages et tilfeldig tall. Random-funksjonen lager et desimaltall mellom 0 og 1
+       //Floor runder det ned til nærmeste hele tall. Også ganges det med 7
+       //Da får vi et tall mellom 0 og 7. Hvorfor tror du vi trenger det
+       //Hint: Første posisjon i en liste er alltid nullposisjonen
+       var positionInColorArray = Math.floor(Math.random()*7);
+       //nå bruker vi tallet til å trekke ut en farge fra listen. Hvis tallet er 3 
+       //er det den fargen som er på 4. plass i listen. Er tallet 0, er det fargen
+       //som er først i listen. Mennesker teller fra 1. Datamaskiner teller fra
+       //null
+       alert(positionInColorArray);
+       var colorName = colors[positionInColorArray];
+       //Nå finner vi den biten i siden som inneholder fargen. Klarer du å se
+       //hvilken? Det har en ID som heter "page"...
+       alert(colorName);
+       document.getElementById("page").style = "background-color: " + colorName;
+    }
+
+
+        </script>
+    </head>
+<h1 style='color:red'>Velkommen!</h1>
+<body id="page" style='background-color:yellow'>
+<h3>Klikk en av disse:</h3>
+<button onclick='alert("Hade!")'>Logg ut</button>
+<button onclick='alert("Hei!")'>Logg inn</button>
+<button onclick='changeBackgroundColor();'>Fargeskift</button>
+<br>
+<br>
+<h3 style='color:red'>Regning!</h3>
+<button onclick='alert("20")'>10+10</button>
+<button onclick='alert("100")'>50+50</button>
+<button onclick='alert("10")'>5x2</button>
+<button onclick='alert("1000")'>100x10</button>
+<button onclick='alert("10")'>1x10</button>
+<br>
+<br>
+<a href='file:///C:/nettsider/Snarveier-B-Nett.html' target='new'>SNARVEIER HER!</a>
+<br>
+<br>
+<h1 style='color:red'>Min Partner</h1>
+<button onclick='alert("6 ar")'>Alder</button>
+<button onclick='alert("jente")'>Kjann</button>
+<button onclick='alert("snill")'>Personlighet</button>
+<br>
+<br>
+<h3 style='color:red'>BESTE AVISEN EVER!!!!!!!!!!!!!!!!!!</h3>
+<br>
+<a href='https://www.bt.no/' target='_new'>LINK HER!</a>
+
+
+
+
+
+
+
+
+</html>
